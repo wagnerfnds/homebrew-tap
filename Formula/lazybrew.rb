@@ -1,7 +1,6 @@
 class Lazybrew < Formula
   desc "Keyboard-first Homebrew management for macOS"
   homepage "https://github.com/wagnerfnds/LazyBrew"
-  version "0.3.0"
   license "MIT"
 
   depends_on macos: :ventura
