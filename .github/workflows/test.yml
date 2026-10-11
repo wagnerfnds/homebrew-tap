@@ -5,8 +5,10 @@ permissions:
 jobs:
   test:
     strategy:
+      fail-fast: false
       matrix:
         os: [macos-15, macos-15-intel]
+        formula: [lazybrew, pierd]
     runs-on: ${{ matrix.os }}
     env:
       HOMEBREW_NO_AUTO_UPDATE: '1'
@@ -17,9 +19,9 @@ jobs:
         run: |
           brew tap wagnerfnds/tap "$GITHUB_WORKSPACE"
           if brew help trust >/dev/null 2>&1; then
-            brew trust --formula wagnerfnds/tap/lazybrew
+            brew trust --formula wagnerfnds/tap/${{ matrix.formula }}
           fi
-      - run: brew style wagnerfnds/tap/lazybrew
-      - run: brew audit --strict wagnerfnds/tap/lazybrew
-      - run: brew install wagnerfnds/tap/lazybrew
-      - run: brew test wagnerfnds/tap/lazybrew
+      - run: brew style wagnerfnds/tap/${{ matrix.formula }}
+      - run: brew audit --strict wagnerfnds/tap/${{ matrix.formula }}
+      - run: brew install wagnerfnds/tap/${{ matrix.formula }}
+      - run: brew test wagnerfnds/tap/${{ matrix.formula }}
