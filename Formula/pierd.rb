@@ -1,30 +1,30 @@
 class Pierd < Formula
   desc "Box server for Pier: run and follow coding agents from iPhone, iPad and Mac"
   homepage "https://docktopier.com/"
-  version "1.5.0"
+  version "1.5.1"
   license "MIT"
 
   depends_on "tmux"
 
   on_macos do
     on_arm do
-      url "https://github.com/wagnerfnds/pier/releases/download/pierd-v1.5.0/pierd-v1.5.0-darwin-arm64.tar.gz"
-      sha256 "067c1d98d625f8682e3a63be52076469bc871d4ae93d3581e520b685baf13094"
+      url "https://github.com/wagnerfnds/pier/releases/download/pierd-v1.5.1/pierd-v1.5.1-darwin-arm64.tar.gz"
+      sha256 "d3cef48498f746997775092c210a9a7663708d897bcc1d4b0aaaeb7301944465"
     end
     on_intel do
-      url "https://github.com/wagnerfnds/pier/releases/download/pierd-v1.5.0/pierd-v1.5.0-darwin-amd64.tar.gz"
-      sha256 "9c66a99f2fdb31c76b44b623f5c79411a7caf396a37ac9204f0a781c3db08eb0"
+      url "https://github.com/wagnerfnds/pier/releases/download/pierd-v1.5.1/pierd-v1.5.1-darwin-amd64.tar.gz"
+      sha256 "71ae1343aa4056c20c032e59ea8ae30c0cc89c418cae998d765df577e31b6697"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/wagnerfnds/pier/releases/download/pierd-v1.5.0/pierd-v1.5.0-linux-arm64.tar.gz"
-      sha256 "efd2a4cf685d66e522b75aac28a70326748975150596e77918ad87980a13f246"
+      url "https://github.com/wagnerfnds/pier/releases/download/pierd-v1.5.1/pierd-v1.5.1-linux-arm64.tar.gz"
+      sha256 "470d8e5e3ab7ca42fc8a3744282831ddbf695253665f5ee87ef3f84e8adec0ca"
     end
     on_intel do
-      url "https://github.com/wagnerfnds/pier/releases/download/pierd-v1.5.0/pierd-v1.5.0-linux-amd64.tar.gz"
-      sha256 "1c9d9fe43aa6d15f18385ef1299e33d2812b3e0cda37a48f7caa9616a5dddc20"
+      url "https://github.com/wagnerfnds/pier/releases/download/pierd-v1.5.1/pierd-v1.5.1-linux-amd64.tar.gz"
+      sha256 "af5bf7d90dc5c2f1ea89976b8427ec8d6d1458bcbe1042da25191156b8f0c10a"
     end
   end
 
